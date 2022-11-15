@@ -5,8 +5,8 @@ on:
     branches:
       - main
   pull_request:
-    branches-ignore:
-      - 'dependabot/**'
+    branches:
+      - '!dependabot/**'
 
 jobs:
   build:
