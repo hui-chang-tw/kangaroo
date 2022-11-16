@@ -1,14 +1,13 @@
 name: Dependabot PR check and auto approval
 
 on:
-  pull_request:
-    branches:
-      - 'dependabot/**'
   pull_request_target:
     types:
       - opened
       - synchronize
       - reopened
+    branches:
+      - main
 
 jobs:
   build:
