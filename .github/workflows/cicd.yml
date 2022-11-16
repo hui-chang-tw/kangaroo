@@ -1,0 +1,21 @@
+name: CI workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  pull_request_target:
+    branches:
+      - 'dependabot/**'
+
+jobs:
+  read_secret:
+    runs-on: ubuntu-latest
+    steps:
+      - name: read secret
+        run: echo "$DEMO_SECRET"
+        env:
+          DEMO_SECRET: ${{ secrets.DEMO_SECRET }}
