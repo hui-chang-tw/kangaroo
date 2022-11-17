@@ -5,10 +5,11 @@ on:
     branches:
       - main
   pull_request:
+    branches:
+      - '!dependabot/**'
 
 jobs:
   read_secret:
-    if: ${{ github.actor != 'dependabot[bot]' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
