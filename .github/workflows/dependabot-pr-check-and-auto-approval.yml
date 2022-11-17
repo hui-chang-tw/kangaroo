@@ -1,13 +1,10 @@
-name: CI workflow
+name: Dependabot PR check and auto approval
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
-      - main
-      - '!dependabot/**'
+      - 'dependabot/**'
+  pull_request_target:
 
 jobs:
   read_secret:
