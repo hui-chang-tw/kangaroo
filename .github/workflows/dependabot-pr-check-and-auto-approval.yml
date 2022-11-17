@@ -1,13 +1,11 @@
 name: Dependabot PR check and auto approval
 
 on:
-  pull_request:
-    branches:
-      - 'dependabot/**'
   pull_request_target:
 
 jobs:
   read_secret:
+    if: ${{ github.actor == 'dependabot[bot]' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
