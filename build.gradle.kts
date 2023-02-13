@@ -23,7 +23,7 @@ dependencies {
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
   implementation("org.jetbrains.kotlin:kotlin-reflect")
   implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-  implementation("com.auth0:java-jwt:4.2.1")
+  implementation("com.auth0:java-jwt:4.3.0")
 
   runtimeOnly("com.h2database:h2")
 
